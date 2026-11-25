@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KCW | Krazy Championship Wrestling</title>
+<meta name="description" content="KCW Krazy Championship Wrestling: New England pro wrestling. Our roster and fans are one colony. Together, we are The Hive.">
+<meta property="og:title" content="KCW | Krazy Championship Wrestling"><meta property="og:description" content="KCW Krazy Championship Wrestling: New England pro wrestling. Our roster and fans are one colony. Together, we are The Hive."><meta property="og:image" content="assets/img/og-image.jpg">
+<meta name="theme-color" content="#070707">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" href="assets/img/favicon-32.png"><link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<section class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">New England Pro Wrestling</div>
+    <h1>Krazy <span class="gold">Championship</span> Wrestling</h1>
+    <p class="lead">Our roster and fans are one colony. Together, we are <b class="gold">The Hive</b>. Feel the sting!</p>
+    <p class="eyebrow" style="margin-top:14px;color:var(--gold);letter-spacing:.18em">One Team. One Colony. Total Domination!</p>
+    <div class="actions"><a class="btn" href="roster.html">Meet the Roster</a><a class="btn ghost" href="videos.html">Watch Videos</a></div>
+  </div>
+  <img class="hero-logo" src="assets/img/kcw-logo.png" alt="KCW Krazy Championship Wrestling logo: angry yellow jacket mascot">
+</div></section>
+<div class="stripe"></div>
+
+<section class="block"><div class="wrap two" style="align-items:center">
+  <div><img src="assets/img/sunday-night-swarm.jpg" alt="KCW Sunday Night Swarm" style="border-radius:10px;border:1px solid var(--line)"></div>
+  <div class="panel">
+    <div class="eyebrow">Next on KCW</div>
+    <h2 id="next-title">Sunday Night Swarm</h2>
+    <div id="next-when" class="gold" style="font-family:var(--cond);font-size:1.15rem;letter-spacing:.05em"></div>
+    <div class="countdown" id="countdown"></div>
+    <p id="next-blurb" class="muted"></p>
+    <p>Premieres <b>Black Friday at 7 PM ET</b>, then <b>every Sunday at 7 PM ET</b> on YouTube, Facebook, Instagram &amp; TikTok.</p>
+    <a class="btn" href="events.html">All Shows</a>
+  </div>
+</div></section>
+
+<section class="block" style="padding-top:0"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">The Colony</div><h2>The <span class="gold">Roster</span></h2></div><a class="btn ghost" href="roster.html">Full Roster &rarr;</a></div>
+  <div class="grid roster-grid" id="home-roster"></div>
+</div></section>
+
+<section class="block" style="padding-top:0"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">In the Ring</div><h2>Latest <span class="gold">Matches</span></h2></div><a class="btn ghost" href="videos.html">All Videos &rarr;</a></div>
+  <div class="grid video-grid" id="home-videos"></div>
+</div></section>
+
+<section class="block" style="padding-top:0"><div class="wrap panel" style="text-align:center">
+  <p class="quote">Enter <em>The Hive</em></p>
+  <p class="quote" style="font-size:clamp(1.4rem,3vw,2.2rem)">One Team. One Colony. <em>Total Domination!</em></p>
+  <p class="muted">Follow KCW everywhere for roster intros, match clips and every episode of Sunday Night Swarm.</p>
+  <div id="home-socials" style="display:flex;justify-content:center"></div>
+  <p style="margin-top:20px"><a class="btn" href="https://krazy-championship-wrestling.myspreadshop.com" target="_blank" rel="noopener">Shop Official KCW Merch</a></p>
+</div></section>
+
+<script src="data/site.js"></script>
+<script src="data/roster.js"></script>
+<script src="js/main.js"></script>
+</body></html>
