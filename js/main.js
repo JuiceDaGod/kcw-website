@@ -14,6 +14,7 @@
     threads: '<svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#000" stroke="#555"/><path fill="#fff" d="M16.55 11.65c-.15-2.55-1.55-4.3-4.35-4.3-2.95 0-4.9 2.15-4.9 5.85 0 4.15 2.2 6.05 5.5 6.05 1.85 0 3.35-.5 4.4-1.45v-1.7c-.9.85-2.05 1.4-3.55 1.4-2.2 0-3.7-1.3-3.7-3.95 0-2.55 1.4-4.15 3.4-4.15 1.45 0 2.4.8 2.7 2.15h-2.15v1.55h3.85c.05-.45.15-.95.15-1.5 0-.15 0-.3-.05-.5z"/></svg>',
     email: '<svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="#f5b800" stroke-width="2"/><path d="M3 6l9 7 9-7" fill="none" stroke="#f5b800" stroke-width="2"/></svg>',
     x: '<svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#000" stroke="#444"/><path fill="#fff" d="M13.6 10.8 19 4.5h-1.3l-4.7 5.5-3.8-5.5H5l5.7 8.3L5 19.5h1.3l5-5.8 4 5.8H19.6zm-1.8 2-.6-.8-4.6-6.6h2l3.7 5.3.6.8 4.8 6.9h-2z"/></svg>',
+    twitch: '<svg viewBox="0 0 24 24"><path fill="#9146FF" d="M4.3 1 1.5 4.8v15.4h5.2V23h2.8l2.6-2.8h4L22.5 14V1H4.3zm16.4 12.2-3.5 3.5h-4.4l-2.6 2.8v-2.8H6.5V2.8h14.2v10.4z"/><path fill="#fff" d="M17.2 7.2h1.8v5.4h-1.8V7.2zm-4.8 0H14v5.4h-1.6V7.2z"/></svg>',
     website: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#f5b800" stroke-width="2"/><path d="M2 12h20M12 2c3 3 3 17 0 20M12 2c-3 3-3 17 0 20" fill="none" stroke="#f5b800" stroke-width="1.5"/></svg>'
   };
   const SIL = '<svg viewBox="0 0 64 64" fill="currentColor"><circle cx="32" cy="20" r="11"/><path d="M10 60c0-14 10-24 22-24s22 10 22 24z"/></svg>';
@@ -129,12 +130,12 @@
       const mItem = m => { const href = m.youtube ? ytUrl(m.youtube) : m.url;
         return `<li><a class="match" href="${href}" target="_blank" rel="noopener">${m.youtube ? `<img src="${ytThumb(m.youtube)}" alt="" loading="lazy">` : `<div class="noimg">RESULT</div>`}
         <div><div class="t">${esc(m.title)}</div><div class="s"><span class="tag ${m.kcw ? "kcw" : ""}">${esc(m.promotion || "")}</span>${m.date ? `<span>${esc(m.date)}</span>` : ""}${m.note ? `<span>${esc(m.note)}</span>` : ""}<span>${m.youtube ? "▶ YouTube" : "↗ Link"}</span></div></div></a></li>`; };
-      const ownSoc = (w.socials || []).map(s => ({ ...s, label: { instagram: "Instagram", tiktok: "TikTok", youtube: "YouTube", facebook: "Facebook", threads: "Threads", x: "X", website: "Website" }[s.type] }));
+      const ownSoc = (w.socials || []).map(s => ({ ...s, label: { instagram: "Instagram", tiktok: "TikTok", youtube: "YouTube", facebook: "Facebook", threads: "Threads", x: "X", twitch: "Twitch", website: "Website" }[s.type] }));
       const intro = w.intro || {};
       root.innerHTML = `<div class="wrap"><div class="breadcrumb"><a href="roster.html">&larr; Roster</a> / ${esc(w.name)}</div>
         <div class="w-hero"><div><div class="photo">${photoHTML(w)}</div></div>
         <div><div class="nick">${esc(w.nickname)}</div><h1>${esc(w.name)}</h1><span class="tag">${esc(w.category)}</span>
-          ${w.bio ? `<p class="bio">${esc(w.bio)}</p><div class="bio-src">Official bio: ${esc(w.bioSource)}</div>` : `<p style="margin:18px 0"><span class="coming">Bio coming soon</span></p>`}
+          ${w.bio ? `${esc(w.bio).split(/\n\n+/).map(p => `<p class="bio">${p}</p>`).join("")}<div class="bio-src">Official bio: ${esc(w.bioSource)}</div>` : `<p style="margin:18px 0"><span class="coming">Bio coming soon</span></p>`}
           ${stats ? `<table class="stats">${stats}</table>` : ""}
           ${partners.length ? `<p><span class="eyebrow">Aligned with</span><br>${partners.map(p => `<a href="wrestler.html?w=${p.slug}">${esc(p.name)}</a>`).join(" · ")}</p>` : ""}
           <div style="margin-top:16px"><div class="eyebrow" style="margin-bottom:8px">${ownSoc.length ? "Follow " + esc(w.name) : "Social media"}</div>
