@@ -13,6 +13,42 @@
 <body class="splash-page" data-page="splash">
   <main class="splash">
     <img class="splash-logo" src="assets/img/kcw-logo.png" alt="KCW Krazy Championship Wrestling logo: angry yellow jacket mascot">
+    <p class="splash-ad">Sunday Night Swarm · Episode 1 · Debuts Black Friday · Nov 27 · 7 PM ET</p>
+    <div class="countdown splash-countdown" id="splash-countdown" aria-live="polite"></div>
+    <a class="splash-live" id="splash-live" hidden target="_blank" rel="noopener">Episode 1 is LIVE now</a>
     <a class="btn splash-enter" href="home.html">Click here to join the Hive</a>
   </main>
+  <script src="data/site.js"></script>
+  <script>
+  (function () {
+    var S = window.KCW_SITE || {};
+    var ev = (S.events || [])[0];
+    var yt = ((S.socials || []).filter(function (s) { return s.type === "youtube"; })[0] || {}).url
+      || "https://www.youtube.com/@krazychampionshipwrestling";
+    var el = document.getElementById("splash-countdown");
+    var live = document.getElementById("splash-live");
+    if (live) live.href = yt;
+    if (!ev || !el || !live) return;
+    var target = new Date(ev.start).getTime();
+    var timer;
+    function tick() {
+      var s = Math.max(0, Math.floor((target - Date.now()) / 1000));
+      if (s <= 0) {
+        el.innerHTML = "";
+        el.setAttribute("hidden", "");
+        live.removeAttribute("hidden");
+        if (timer) clearInterval(timer);
+        return;
+      }
+      var d = Math.floor(s / 86400); s %= 86400;
+      var h = Math.floor(s / 3600); s %= 3600;
+      var m = Math.floor(s / 60); s %= 60;
+      el.innerHTML = [[d, "Days"], [h, "Hours"], [m, "Min"], [s, "Sec"]].map(function (pair) {
+        return "<div><b>" + String(pair[0]).padStart(2, "0") + "</b><span>" + pair[1] + "</span></div>";
+      }).join("");
+    }
+    tick();
+    timer = setInterval(tick, 1000);
+  })();
+  </script>
 </body></html>
