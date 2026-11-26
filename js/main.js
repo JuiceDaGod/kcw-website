@@ -6,6 +6,24 @@
   const ytThumb = id => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
   const ytUrl = id => `https://www.youtube.com/watch?v=${id}`;
 
+  function merchMailto(name, title) {
+    const subject = `Merch order: ${title || (name + " concept tee")}`;
+    const body = `Hi KCW,\n\nI'd like to order the ${title || (name + " concept tee")}.\n\nSize:\nQuantity:\n\nThanks!`;
+    return `mailto:${S.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+  function merchCard(w) {
+    const m = w.merch || {};
+    if (m.type === "store" && m.url) {
+      return `<a class="card merch-card" href="${m.url}" target="_blank" rel="noopener">${photoHTML({ photo: m.image || w.photo, name: w.name })}<div class="body"><div class="nick">Official merch</div><h3>${esc(w.name)}</h3><div class="meta"><span class="tag kcw">${esc(m.label || "Shop")}</span><span>↗ Store</span></div></div></a>`;
+    }
+    if (m.type === "concept") {
+      return `<article class="card merch-card"><div class="photo"><img src="${m.image}" alt="${esc(m.title || (w.name + " concept tee"))}" loading="lazy"></div><div class="body"><div class="nick">Concept design</div><h3>${esc(w.name)}</h3><p class="muted" style="margin:6px 0 10px;font-size:.85rem">${esc(m.title || (w.name + " concept tee"))}. Not sold in the official store — order by email.</p><div class="actions" style="margin-top:4px"><a class="btn" href="${merchMailto(w.name, m.title)}">Order by email</a><a class="btn ghost" href="wrestler.html?w=${w.slug}">Bio</a></div></div></article>`;
+    }
+    return "";
+  }
+
+
+
   const ICONS = {
     youtube: '<svg viewBox="0 0 24 24"><path fill="#FF0000" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"/><path fill="#fff" d="M9.6 15.6V8.4l6.3 3.6z"/></svg>',
     tiktok: '<svg viewBox="0 0 24 24"><path fill="#25F4EE" d="M9.4 9.6v-1a7.5 7.5 0 0 0-1-.1 7.3 7.3 0 0 0-4.2 13.3A7.3 7.3 0 0 1 9.4 9.6z"/><path fill="#25F4EE" d="M9.6 20.6a3.3 3.3 0 0 0 3.3-3.2V1.5h2.9a5.6 5.6 0 0 1-.1-1h-4v15.9a3.3 3.3 0 0 1-3.3 3.2 3.3 3.3 0 0 1-1.5-.4 3.3 3.3 0 0 0 2.7 1.4zM21.4 6.9V6a5.5 5.5 0 0 1-3-.9 5.6 5.6 0 0 0 3 1.8z"/><path fill="#FE2C55" d="M18.4 5.1a5.5 5.5 0 0 1-1.4-3.6h-1a5.6 5.6 0 0 0 2.4 3.6zM8.4 13a3.3 3.3 0 0 0-1.5 6.2 3.3 3.3 0 0 1 3.7-5.4V9.6a7.5 7.5 0 0 0-1-.1H9.4v3.6a3.3 3.3 0 0 0-1-.1z"/><path fill="#fff" d="M21.4 6.9v3.5a9.3 9.3 0 0 1-5.5-1.8v8.1a7.3 7.3 0 0 1-11.6 5.9 7.3 7.3 0 0 0 12.6-5V9.5a9.3 9.3 0 0 0 5.5 1.8V7.7a5.6 5.6 0 0 1-1-.1z"/></svg>',
@@ -22,7 +40,7 @@
 
   /* ---------- header / footer ---------- */
   const page = document.body.dataset.page || "";
-  const NAV = [["index.html", "Home", "home"], ["roster.html", "Roster", "roster"], ["events.html", "Shows", "events"], ["videos.html", "Videos", "videos"], ["about.html", "About", "about"], ["contact.html", "Follow / Contact", "contact"]];
+  const NAV = [["index.html", "Home", "home"], ["roster.html", "Roster", "roster"], ["events.html", "Shows", "events"], ["videos.html", "Videos", "videos"], ["merch.html", "Merch", "merch"], ["about.html", "About", "about"], ["contact.html", "Follow / Contact", "contact"]];
   const header = document.createElement("header");
   header.className = "site-header";
   header.innerHTML = `<div class="wrap">
@@ -146,6 +164,14 @@
           <div class="panel"><p style="margin-top:0">Watch ${esc(w.name)}'s official KCW roster introduction.</p><div class="socials">
           ${intro.youtube ? `<a class="soc" href="${ytUrl(intro.youtube)}" target="_blank" rel="noopener">${ICONS.youtube}<span>Watch on YouTube</span></a>` : ""}
           ${intro.tiktok ? `<a class="soc" href="${intro.tiktok}" target="_blank" rel="noopener">${ICONS.tiktok}<span>Watch on TikTok</span></a>` : ""}</div></div></div></section>` : ""}
+        ${w.merch && w.merch.type === "store" && w.merch.url ? `<section class="block" style="padding-top:10px"><div class="section-head"><h2>Official <span class="gold">Merch</span></h2></div>
+          <p class="actions"><a class="btn" href="${w.merch.url}" target="_blank" rel="noopener">${esc(w.merch.label || "Shop merch")}</a></p></section>` : ""}
+        ${w.merch && w.merch.type === "concept" ? `<section class="block" style="padding-top:10px"><div class="section-head"><h2>Concept <span class="gold">Merch</span></h2><span class="muted">Concept design</span></div>
+          <div class="two merch-bio"><div class="photo"><img src="${w.merch.image}" alt="${esc(w.merch.title || (w.name + " concept tee"))}"></div>
+          <div class="panel"><div class="eyebrow">Concept design</div><h3 style="margin:.2em 0 .4em">${esc(w.merch.title || (w.name + " concept tee"))}</h3>
+          <p>A typography tee using ${esc(w.name)}'s official ring name and the official KCW bee logo. This is a concept design — it is not listed in the official store. Email KCW with your size and quantity to order.</p>
+          <p class="actions"><a class="btn" href="${merchMailto(w.name, w.merch.title)}">Order by email</a> <a class="btn ghost" href="merch.html">All merch</a></p>
+          </div></div></section>` : ""}
         <section class="block" style="padding-top:10px"><div class="section-head"><h2>Match <span class="gold">History</span></h2><span class="muted">${(w.matches || []).length} video${(w.matches || []).length === 1 ? "" : "s"}</span></div>
           ${kcwM.length ? `<h3 style="color:var(--gold)">In KCW</h3><ul class="match-list">${kcwM.map(mItem).join("")}</ul>` : ""}
           ${otherM.length ? `<h3 style="margin-top:28px">Around the Independents</h3><p class="muted" style="margin-top:-6px;font-size:.9rem">Matches and appearances outside KCW, found on YouTube and wrestling databases.</p><ul class="match-list">${otherM.map(mItem).join("")}</ul>` : ""}
@@ -166,6 +192,21 @@
     about() {
       $("#about-sponsors").innerHTML = S.sponsors.map(s => `<a class="soc" href="${s.url}" target="_blank" rel="noopener sponsored"><span><b>${esc(s.name)}</b> · ${esc(s.note)}</span></a>`).join("");
       $("#about-staff").innerHTML = R.filter(w => ["Officials", "Announce Team", "Manager"].includes(w.category)).map(card).join("");
+    },
+    merch() {
+      const box = $("#official-merch");
+      if (box) {
+        const img = S.merchImage ? `<img src="${S.merchImage}" alt="Official KCW merch">` : "";
+        box.innerHTML = `<div class="photo">${img}</div><div>
+          <div class="eyebrow">Official store</div>
+          <h2>${esc(S.merchName || "Official KCW Merch")}</h2>
+          <p>${esc(S.merchBlurb || "")}</p>
+          ${S.merchSource ? `<p class="muted" style="font-size:.8rem">Source: ${esc(S.merchSource)}</p>` : ""}
+          <p class="actions"><a class="btn" href="${S.merchUrl}" target="_blank" rel="noopener">Shop official merch</a></p>
+        </div>`;
+      }
+      const grid = $("#merch-grid");
+      if (grid) grid.innerHTML = R.map(merchCard).join("");
     },
     contact() {
       $("#big-socials").innerHTML = S.socials.map(s => `<a href="${s.url}" target="_blank" rel="noopener">${ICONS[s.type] || ICONS.website}<b>${s.label}</b><span class="muted">${esc(s.handle)}</span></a>`).join("");

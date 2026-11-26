@@ -12,6 +12,11 @@ window.KCW_SITE = {
   email: "KrazyCampionshipWrestling@gmail.com",
   region: "New England",
   merchUrl: "https://krazy-championship-wrestling.myspreadshop.com",
+  merchName: "Official KCW Spreadshop",
+  merchImage: "assets/img/official-merch.jpg",
+  merchSource: "Official KCW Instagram post, Nov 19, 2026",
+  merchBlurb: "REP THE HIVE! Official KCW merch is here. Our new AWA-inspired shield pays tribute to old-school pro wrestling with five stars, taped fists, and one fired-up KCW Yellow Jacket. Grab a tee, hoodie, mug, or sticker and show your support for Krazy Championship Wrestling. The Hive is Family.",
+
 
   socials: [
     { type: "youtube",   label: "YouTube",   handle: "@krazychampionshipwrestling", url: "https://www.youtube.com/@krazychampionshipwrestling" },
