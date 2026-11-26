@@ -176,3 +176,18 @@ section.block{padding:64px 0}
   .card .meta{flex-direction:column;align-items:flex-start;gap:4px;font-size:.72rem}
   .filters .search{min-width:0;width:100%}
 }
+
+/* merch */
+.merch-official{display:grid;grid-template-columns:minmax(220px,380px) 1fr;gap:28px;align-items:center;padding:22px;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(160deg,#151515,#0a0a0a)}
+.merch-official .photo img{width:100%;border-radius:8px;border:1px solid var(--line);display:block}
+.merch-grid{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.merch-card .photo img{width:100%;aspect-ratio:9/11;object-fit:cover;object-position:center top}
+.merch-card .body .actions{display:flex;flex-wrap:wrap;gap:8px}
+.merch-bio .photo img{width:100%;border-radius:10px;border:1px solid var(--line)}
+@media(max-width:800px){
+  .merch-official{grid-template-columns:1fr}
+  .merch-grid{grid-template-columns:1fr 1fr;gap:12px}
+}
+@media(max-width:520px){
+  .merch-grid{grid-template-columns:1fr}
+}
