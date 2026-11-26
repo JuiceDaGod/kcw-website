@@ -27,7 +27,7 @@ jobs:
             rm -rf _payload /tmp/assets.tar
           fi
           rm -rf assets/source
-          test -f assets/img/kcw-logo.webp
+          test -f assets/img/kcw-logo.png
           test -f assets/img/official-merch.jpg
           test -f assets/merch/brian-cross-tee.jpg
           test -f assets/roster/vertabreaker.jpg
