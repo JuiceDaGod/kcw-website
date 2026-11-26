@@ -63,3 +63,24 @@ Open `data/site.js`:
 - **Cloudflare Pages** (also free) or any regular web host: upload the folder contents to the site's root (`public_html`).
 
 Note: YouTube won't play embedded videos when the site is opened directly from your computer (`file://`), so clicking a video opens it on YouTube instead. Once the site is hosted, videos play right on the page.
+
+## Merchandise
+
+- Official store URL is `merchUrl` in `data/site.js` (KCW's Spreadshop). The Merch page (`merch.html`) is also in the site nav.
+- If a wrestler has a verified personal store, add it on their object in `data/roster.js`:
+
+```js
+merch: { type: "store", url: "https://example.com/shop", label: "Official merch", image: "assets/merch/name-store.jpg" }
+```
+
+- Wrestlers without a verified store use a typography **concept tee** (official ring name + official KCW logo, no generated likenesses):
+
+```js
+merch: { type: "concept", image: "assets/merch/slug-tee.jpg", title: "Name concept tee" }
+```
+
+Concept orders go by email to `email` in `data/site.js`. Replace a concept image in `assets/merch/` if you print a final design.
+
+## Logo
+
+The site logo is the official KCW YouTube channel avatar (highest-resolution official graphic we could pull from KCW socials), not a photo of the business card. Files live in `assets/img/` (`kcw-logo.png`, `kcw-logo-sm.png`, favicons, `og-image.jpg`, `kcw-banner.jpg` from the official YouTube banner).

@@ -39,6 +39,7 @@ window.KCW_ROSTER = [
       { type: "youtube", url: "https://www.youtube.com/@egotv-presents" },
       { type: "website", url: "https://www.verte840.com" }
     ],
+    merch: { type: "concept", image: "assets/merch/vertabreaker-tee.jpg", title: "Vertabreaker concept tee" },
     intro: { youtube: "gcMrXoAlM04", tiktok: KCW_TT + "7690353191942196511" },
     matches: [
       { title: "Vertabreaker vs Johnny Hellhound (Primal Conflict Championship)", youtube: "YXmO4RCDfRE", promotion: "KCW", kcw: true },
@@ -58,6 +59,7 @@ window.KCW_ROSTER = [
     bio: "Making a name for himself by working all over New England, The Wildhound wants to show he is the leader of the pack. All that oppose him need to be careful or they might get bit.",
     bioSource: "KCW TikTok 'Introducing the KCW Roster' (Oct 16, 2026)",
     stats: [], socials: [],
+    merch: { type: "concept", image: "assets/merch/johnny-rivera-tee.jpg", title: "Johnny Rivera concept tee" },
     intro: { youtube: "eVNoRMPwnX0", tiktok: KCW_TT + "7697321504459066655" },
     matches: [
       { title: "\"The Wild Hound\" Johnny Rivera vs Rock Paint", youtube: "Eo-EttpYnvs", promotion: "XUC Pro Wrestling" },
@@ -75,6 +77,7 @@ window.KCW_ROSTER = [
     bioSource: "KCW TikTok 'Introducing the KCW Roster' (Oct 15, 2026)",
     stats: [ { label: "Experience", value: "30+ years", source: "KCW official bio" } ],
     socials: [],
+    merch: { type: "concept", image: "assets/merch/steve-stallion-tee.jpg", title: "Steve Stallion concept tee" },
     intro: { youtube: "M_5V6V4TDcY", tiktok: KCW_TT + "7697027654116986142" },
     matches: [
       { title: "Steve Stallion (Champ) vs Dambula — NEWA Title, Cranston RI", youtube: "Pa6SKOdDDgc", promotion: "NEWA" },
@@ -90,6 +93,7 @@ window.KCW_ROSTER = [
     bioSource: "KCW TikTok 'Introducing the KCW Roster' (Oct 14, 2026)",
     stats: [ { label: "Experience", value: "30+ years", source: "KCW official bio" } ],
     socials: [],
+    merch: { type: "concept", image: "assets/merch/thrash-tee.jpg", title: "Thrash concept tee" },
     intro: { youtube: "iqujokxAqSI", tiktok: KCW_TT + "7696567387209977118" },
     matches: [
       { title: "Vertabreaker vs Thrash — The Primal Thumbtack Match", youtube: "d23q0HGXOIQ", promotion: "EGOtv" },
@@ -105,6 +109,7 @@ window.KCW_ROSTER = [
     bioSource: "KCW TikTok 'Introducing the KCW Roster' (Oct 3, 2026)",
     stats: [ { label: "Tag team", value: "The Convicted Felons (with Manny Nix)", source: "KCW official bio" } ],
     socials: [], partners: ["manny-nix"],
+    merch: { type: "concept", image: "assets/merch/havoc-tee.jpg", title: "Havoc concept tee" },
     intro: { youtube: "heX8-bNNW_g", tiktok: KCW_TT + "7692486445906283807" },
     matches: [
       { title: "Vertabreaker & Havok vs Dom Paretti & Jordyn Grange (TV Edit)", youtube: "JslPWMec9p4", promotion: "KCW", kcw: true },
@@ -121,6 +126,7 @@ window.KCW_ROSTER = [
     bioSource: "KCW TikTok 'Introducing the KCW Roster' (Oct 5, 2026)",
     stats: [ { label: "Tag team", value: "The Convicted Felons (with Havoc)", source: "KCW official bio" } ],
     socials: [], partners: ["havoc"],
+    merch: { type: "concept", image: "assets/merch/manny-nix-tee.jpg", title: "Manny Nix concept tee" },
     intro: { youtube: "t1lShbKGjIY", tiktok: KCW_TT + "7693281539060272415" },
     matches: [
       { title: "NQW WrestleversarY IV — Manny Nix vs Outlander 1", youtube: "BjW_O1rxY38", promotion: "NQW", date: "Sep 5, 2026" },
@@ -142,6 +148,7 @@ window.KCW_ROSTER = [
       { label: "Manager", value: "\"The Secret Sauce\" Brian Cross", source: "KCW official bio" }
     ],
     socials: [], partners: ["brian-cross"],
+    merch: { type: "concept", image: "assets/merch/kainan-bek-tee.jpg", title: "Kainan Bek concept tee" },
     intro: { youtube: "p6ovhR8_eZU", tiktok: KCW_TT + "7691993396876971294" },
     matches: [
       { title: "Kainan Bek vs Lightning 23", youtube: "h6BiPCc40-c", promotion: "KCW", kcw: true },
@@ -171,6 +178,7 @@ window.KCW_ROSTER = [
       { type: "twitch", url: "https://www.twitch.tv/bottomoftherabbithole", handle: "BottomOfTheRabbitHole" }
     ],
     partners: ["kainan-bek"],
+    merch: { type: "concept", image: "assets/merch/brian-cross-tee.jpg", title: "Brian Cross concept tee" },
     intro: { youtube: "VzPsP2-eRgE", tiktok: KCW_TT + "7692230637360532767" },
     matches: [
       { title: "Hulk Hogan hears the greatest Hulk Hogan impression of all time.", youtube: "olOSega1t-k", promotion: "VoiceOfHulk", note: "YouTube appearance" }
@@ -182,6 +190,7 @@ window.KCW_ROSTER = [
     bio: "From the depths of hell comes the devil's henchman. If you aren't intrigued when he comes to the ring you will be trying to figure out what is the connection between him, his skull and his Druid that accompany him.",
     bioSource: "KCW TikTok 'Introducing the KCW Roster' (Oct 2, 2026)",
     stats: [], socials: [],
+    merch: { type: "concept", image: "assets/merch/blaze-brown-tee.jpg", title: "Blaze Brown concept tee" },
     intro: { youtube: "QkNiY2OdNRo", tiktok: KCW_TT + "7692229309993422111" },
     matches: [
       { title: "Angel The Icon (c) vs Blaze Brown — XUC TV Championship (Resurgence)", youtube: "0tTMHRD0L3g", promotion: "XUC Pro Wrestling" },
@@ -196,6 +205,7 @@ window.KCW_ROSTER = [
     bio: "He has brought a literal reign of terror all over the area. Nothing is certain around this crazy individual other than whoever he invites into his dark carnival isn't safe.",
     bioSource: "KCW TikTok 'Introducing the KCW Roster' (Oct 1, 2026)",
     stats: [], socials: [],
+    merch: { type: "concept", image: "assets/merch/twisted-jester-tee.jpg", title: "The Twizsted Jester concept tee" },
     intro: { youtube: "OCi3BR3D2gE", tiktok: KCW_TT + "7691704469452639518" },
     matches: [
       { title: "\"Notorious\" Rambo Godfrey (c) vs Twisted Jester — SPW Heavyweight Championship Open Challenge", youtube: "FHegOujagds", promotion: "Showcase Pro Wrestling" },
@@ -223,6 +233,7 @@ window.KCW_ROSTER = [
       { type: "youtube", url: "https://www.youtube.com/@CletusTheWrestler" },
       { type: "x", url: "https://x.com/CletusWrestles" }
     ],
+    merch: { type: "concept", image: "assets/merch/cletus-tee.jpg", title: "Cletus concept tee" },
     intro: { youtube: "_n4nBcB9FWo", tiktok: KCW_TT + "7691430710262959391" },
     matches: [
       { title: "C.I.A vs Camo Country (#1 Contenders Match)", youtube: "JvaWkFFsNr4", promotion: "SNW" },
@@ -238,6 +249,7 @@ window.KCW_ROSTER = [
     bioSource: "KCW TikTok 'Introducing the KCW Roster' (Sept 30, 2026)",
     stats: [ { label: "Family", value: "2nd generation; brother of Cody Grange", source: "KCW official bios" } ],
     socials: [], partners: ["cody-grange"],
+    merch: { type: "concept", image: "assets/merch/jordyn-grange-tee.jpg", title: "Jordyn Grange concept tee" },
     intro: { youtube: "RjA4ANQq0Fc", tiktok: KCW_TT + "7691426158264454431" },
     matches: [
       { title: "KCW (10/18/2026) — The Primal Mafia vs Jordyn Grange & Chris Black", youtube: "j1RJGqU-XBg", promotion: "KCW", date: "Oct 18, 2026", kcw: true },
@@ -257,6 +269,7 @@ window.KCW_ROSTER = [
     bioSource: "KCW TikTok 'Introducing the KCW Roster' (Oct 5, 2026)",
     stats: [ { label: "Family", value: "2nd generation; brother of Jordyn Grange", source: "KCW official bios" } ],
     socials: [], partners: ["jordyn-grange"],
+    merch: { type: "concept", image: "assets/merch/cody-grange-tee.jpg", title: "Cody Grange concept tee" },
     intro: { youtube: "WeSbEvS57ic", tiktok: KCW_TT + "7693285737889893663" },
     matches: [
       { title: "Lumen vs Cody Grange", youtube: "UN7MzYo-LWc", promotion: "KCW", kcw: true },
@@ -273,6 +286,7 @@ window.KCW_ROSTER = [
     bioSource: "KCW TikTok 'Introducing the KCW Roster' (Sept 28, 2026)",
     stats: [ { label: "Style", value: "High flyer", source: "KCW official bio" } ],
     socials: [],
+    merch: { type: "concept", image: "assets/merch/chris-black-tee.jpg", title: "Chris Black concept tee" },
     intro: { youtube: "Y8nlUjScX6w", tiktok: KCW_TT + "7690646385418407198" },
     matches: [
       { title: "KCW (10/18/2026) — The Primal Mafia vs Jordyn Grange & Chris Black", youtube: "j1RJGqU-XBg", promotion: "KCW", date: "Oct 18, 2026", kcw: true },
@@ -295,6 +309,7 @@ window.KCW_ROSTER = [
       { label: "Military", value: "30+ years of service, U.S. Army", source: "KCW Instagram" }
     ],
     socials: [],
+    merch: { type: "concept", image: "assets/merch/sgt-stryker-tee.jpg", title: "Sgt. Stryker concept tee" },
     intro: { youtube: "8LRP6XyF_HY", tiktok: KCW_TT + "7690640811616259359" },
     matches: [
       { title: "Danger Boy Alfredo & Wolverine vs Low Life & Sgt Stryker", youtube: "8xJG25ikYRo", promotion: "AWL" },
@@ -308,6 +323,7 @@ window.KCW_ROSTER = [
     bio: "", bioSource: "",
     stats: [ { label: "Billed from", value: "Knockout City Wrestling (per KCW Tron graphic)", source: "KCW YouTube" } ],
     socials: [],
+    merch: { type: "concept", image: "assets/merch/mighty-mac-tee.jpg", title: "Mighty Mac concept tee" },
     intro: { youtube: "dtjJN62t6OQ" },
     matches: [
       { title: "The Last Sheikh Ahmed Jordan vs Mighty Mac (West Warwick, RI)", youtube: "b-Dl1YO9Pbc", promotion: "Indie" },
@@ -320,6 +336,7 @@ window.KCW_ROSTER = [
     photo: "assets/roster/knuckle-heads.jpg",
     bio: "", bioSource: "",
     stats: [], socials: [],
+    merch: { type: "concept", image: "assets/merch/knuckle-heads-tee.jpg", title: "The Knuckle Heads concept tee" },
     intro: { youtube: "zVLMXmvqG4c" },
     matches: [
       { title: "Knuckleheads vs Kevin Chase & Cody Grange", youtube: "P89erYRL6v0", promotion: "AWL" },
@@ -335,6 +352,7 @@ window.KCW_ROSTER = [
     socials: [
       { type: "instagram", url: "https://www.instagram.com/lumenofprowrestling/" }
     ],
+    merch: { type: "concept", image: "assets/merch/lumen-tee.jpg", title: "Lumen concept tee" },
     intro: { tiktok: KCW_TT + "7708953093622254878" },
     matches: [
       { title: "Lumen vs Cody Grange", youtube: "UN7MzYo-LWc", promotion: "KCW", kcw: true },
@@ -350,6 +368,7 @@ window.KCW_ROSTER = [
     bioSource: "KCW TikTok/Instagram 'Introducing the KCW Roster' (Oct 27, 2026)",
     stats: [ { label: "Accolades", value: "Triple Crown Champion", source: "KCW official bio" } ],
     socials: [],
+    merch: { type: "concept", image: "assets/merch/jason-chaos-tee.jpg", title: "Jason Chaos concept tee" },
     intro: { tiktok: KCW_TT + "7701456278505278751" },
     matches: []
   },
@@ -360,6 +379,7 @@ window.KCW_ROSTER = [
     bioSource: "KCW TikTok/Instagram 'Introducing the KCW Roster' (Oct 22, 2026)",
     stats: [ { label: "Accolades", value: "Former Heavyweight Champion, Hall of Famer", source: "KCW official bio" } ],
     socials: [],
+    merch: { type: "concept", image: "assets/merch/ahmed-jordan-tee.jpg", title: "Ahmed Jordan concept tee" },
     intro: { tiktok: KCW_TT + "7699610574841253151" },
     matches: [
       { title: "NQW Freakin Frenzy — Havoc vs Sheik Ahmed Jordan", youtube: "GjfRE63RnSE", promotion: "NQW", date: "Apr 26, 2026" },
@@ -375,6 +395,7 @@ window.KCW_ROSTER = [
     bio: "Unhinged is a polite way to describe Rob. He has been away for a stretch of time and now he is back. He has given Commissioner Lowe his promise that he will be on his \"best behavior\".",
     bioSource: "KCW TikTok/Instagram 'Introducing the KCW Roster' (Oct 22, 2026)",
     stats: [], socials: [],
+    merch: { type: "concept", image: "assets/merch/rob-roberts-tee.jpg", title: "Rob Roberts concept tee" },
     intro: { tiktok: KCW_TT + "7699610030319865118" },
     matches: [
       { title: "NQW Trail To The Title Finals — Rob Roberts vs Brian Sire", youtube: "jOAIbtf0YlM", promotion: "NQW", date: "Aug 28, 2022" },
@@ -390,6 +411,7 @@ window.KCW_ROSTER = [
     bio: "Everyone needs to watch out or be choked out. Dom Paretti is a maniac, a loose cannon and nobody can predict what he is going to do. Hence \"The Pariah\" tag.",
     bioSource: "KCW TikTok/Instagram 'Introducing the KCW Roster' (Oct 21, 2026)",
     stats: [], socials: [],
+    merch: { type: "concept", image: "assets/merch/dom-paretti-tee.jpg", title: "Dom Paretti concept tee" },
     intro: { tiktok: KCW_TT + "7699233981476228382" },
     matches: [
       { title: "Vertabreaker & Havok vs Dom Paretti & Jordyn Grange (TV Edit)", youtube: "JslPWMec9p4", promotion: "KCW", kcw: true },
@@ -406,6 +428,7 @@ window.KCW_ROSTER = [
     bio: "When you think of New England wrestling, few names immediately come to mind. Alfredo is on that Mount Rushmore of New England wrestling royalty. KCW is honored to have this local legend be a part of the colony.",
     bioSource: "KCW TikTok 'Introducing the KCW Roster' (Oct 19, 2026)",
     stats: [], socials: [],
+    merch: { type: "concept", image: "assets/merch/alfredo-tee.jpg", title: "Alfredo concept tee" },
     intro: { tiktok: KCW_TT + "7698529598920756511" },
     matches: [
       { title: "Danger Boy Alfredo & Wolverine vs Low Life & Sgt Stryker", youtube: "8xJG25ikYRo", promotion: "AWL" },
@@ -431,6 +454,7 @@ window.KCW_ROSTER = [
       { type: "facebook", url: "https://www.facebook.com/ChicagoBearHug" },
       { type: "x", url: "https://x.com/ChicagoBearHug" }
     ],
+    merch: { type: "concept", image: "assets/merch/steve-michaels-tee.jpg", title: "Steve Michaels concept tee" },
     intro: { tiktok: KCW_TT + "7696081843883379998" },
     matches: [
       { title: "Steve Michaels vs Chris L.O.G.A.N. — BCW Heavyweight Championship", youtube: "F6AZ9D-Nii0", promotion: "BCW" },
@@ -445,6 +469,7 @@ window.KCW_ROSTER = [
     bio: "KCW Commissioner. Get ready for the Swarm!", bioSource: "KCW YouTube / TikTok",
     stats: [ { label: "Role", value: "KCW Commissioner", source: "KCW socials" } ],
     socials: [],
+    merch: { type: "concept", image: "assets/merch/john-lowe-tee.jpg", title: "John Lowe concept tee" },
     intro: { youtube: "JSQBlBtw4SU", tiktok: KCW_TT + "7702264786632887582", label: "Get Ready for the Swarm!" },
     matches: []
   },
@@ -455,6 +480,7 @@ window.KCW_ROSTER = [
     bioSource: "KCW TikTok 'Introducing the KCW Roster' (Oct 8, 2026)",
     stats: [ { label: "Role", value: "Play-by-play, Sunday Night Swarm", source: "KCW official bio" } ],
     socials: [],
+    merch: { type: "concept", image: "assets/merch/tony-jones-tee.jpg", title: "Tony Jones concept tee" },
     intro: { youtube: "tCguysuN6EU", tiktok: KCW_TT + "7694320693890108702" },
     matches: []
   },
@@ -465,6 +491,7 @@ window.KCW_ROSTER = [
     bioSource: "KCW TikTok 'Introducing the KCW Roster' (Oct 13, 2026)",
     stats: [ { label: "Role", value: "Ring announcer", source: "KCW official bio" } ],
     socials: [],
+    merch: { type: "concept", image: "assets/merch/jay-roch-tee.jpg", title: "Jay Roch concept tee" },
     intro: { youtube: "DojPiK33C1s", tiktok: KCW_TT + "7696319449346903326" },
     matches: []
   }
