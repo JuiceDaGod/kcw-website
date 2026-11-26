@@ -17,7 +17,8 @@
       return `<a class="card merch-card" href="${m.url}" target="_blank" rel="noopener">${photoHTML({ photo: m.image || w.photo, name: w.name })}<div class="body"><div class="nick">Official merch</div><h3>${esc(w.name)}</h3><div class="meta"><span class="tag kcw">${esc(m.label || "Shop")}</span><span>↗ Store</span></div></div></a>`;
     }
     if (m.type === "concept") {
-      return `<article class="card merch-card"><div class="photo"><img src="${m.image}" alt="${esc(m.title || (w.name + " concept tee"))}" loading="lazy"></div><div class="body"><div class="nick">Concept design</div><h3>${esc(w.name)}</h3><p class="muted" style="margin:6px 0 10px;font-size:.85rem">${esc(m.title || (w.name + " concept tee"))}. Not sold in the official store — order by email.</p><div class="actions" style="margin-top:4px"><a class="btn" href="${merchMailto(w.name, m.title)}">Order by email</a><a class="btn ghost" href="wrestler.html?w=${w.slug}">Bio</a></div></div></article>`;
+      const from = m.kind === "tron" ? "Printed from the official KCW Tron logo and photo." : (m.kind === "intro-card" ? "Printed from the official KCW intro logo and photo." : "");
+      return `<article class="card merch-card"><div class="photo"><img src="${m.image}" alt="${esc(m.title || (w.name + " concept tee"))}" loading="lazy"></div><div class="body"><div class="nick">Concept design</div><h3>${esc(w.name)}</h3><p class="muted" style="margin:6px 0 10px;font-size:.85rem">${esc(m.title || (w.name + " concept tee"))}. ${from} Not sold in the official store — order by email.</p><div class="actions" style="margin-top:4px"><a class="btn" href="${merchMailto(w.name, m.title)}">Order by email</a><a class="btn ghost" href="wrestler.html?w=${w.slug}">Bio</a></div></div></article>`;
     }
     return "";
   }
@@ -167,9 +168,10 @@
         ${w.merch && w.merch.type === "store" && w.merch.url ? `<section class="block" style="padding-top:10px"><div class="section-head"><h2>Official <span class="gold">Merch</span></h2></div>
           <p class="actions"><a class="btn" href="${w.merch.url}" target="_blank" rel="noopener">${esc(w.merch.label || "Shop merch")}</a></p></section>` : ""}
         ${w.merch && w.merch.type === "concept" ? `<section class="block" style="padding-top:10px"><div class="section-head"><h2>Concept <span class="gold">Merch</span></h2><span class="muted">Concept design</span></div>
-          <div class="two merch-bio"><div class="photo"><img src="${w.merch.image}" alt="${esc(w.merch.title || (w.name + " concept tee"))}"></div>
+          <div class="two merch-bio"><div class="photo"><img src="${w.merch.image}" alt="${esc(w.merch.title || (w.name + " concept tee"))}">${w.merch.design ? `<img class="merch-flat" src="${w.merch.design}" alt="${esc(w.name)} official graphic">` : ""}</div>
           <div class="panel"><div class="eyebrow">Concept design</div><h3 style="margin:.2em 0 .4em">${esc(w.merch.title || (w.name + " concept tee"))}</h3>
-          <p>A typography tee using ${esc(w.name)}'s official ring name and the official KCW bee logo. This is a concept design — it is not listed in the official store. Email KCW with your size and quantity to order.</p>
+          <p>${w.merch.kind === "tron" ? `This concept tee uses the official name logo and photo from ${esc(w.name)}'s KCW Tron video.` : w.merch.kind === "intro-card" ? `This concept tee uses the official name logo and photo from ${esc(w.name)}'s official KCW intro graphic. No YouTube Tron video has been posted for this roster member.` : `This is a concept tee for ${esc(w.name)}.` } It is a concept design — it is not listed in the official store. Email KCW with your size and quantity to order.</p>
+          ${w.merch.source ? `<p class="muted" style="font-size:.8rem">Source: ${esc(w.merch.source)}</p>` : ""}
           <p class="actions"><a class="btn" href="${merchMailto(w.name, w.merch.title)}">Order by email</a> <a class="btn ghost" href="merch.html">All merch</a></p>
           </div></div></section>` : ""}
         <section class="block" style="padding-top:10px"><div class="section-head"><h2>Match <span class="gold">History</span></h2><span class="muted">${(w.matches || []).length} video${(w.matches || []).length === 1 ? "" : "s"}</span></div>

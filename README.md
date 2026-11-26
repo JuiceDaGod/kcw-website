@@ -73,13 +73,20 @@ Note: YouTube won't play embedded videos when the site is opened directly from y
 merch: { type: "store", url: "https://example.com/shop", label: "Official merch", image: "assets/merch/name-store.jpg" }
 ```
 
-- Wrestlers without a verified store use a typography **concept tee** (official ring name + official KCW logo, no generated likenesses):
+- Wrestlers without a verified store use a **concept tee** built from that person's official KCW Tron (or official intro) name logo and photo. No generated likenesses and no invented wordmarks when an official logo exists. Files: the dark-tee mockup (`image`) and the flat official graphic (`design`):
 
 ```js
-merch: { type: "concept", image: "assets/merch/slug-tee.jpg", title: "Name concept tee" }
+merch: {
+  type: "concept",
+  image: "assets/merch/slug-tee.jpg",
+  design: "assets/merch/slug-design.jpg",
+  title: "Name Tron concept tee",
+  kind: "tron",  // or "intro-card" if no YouTube Tron was posted
+  source: "Official KCW Tron title card (YouTube: ...)"
+}
 ```
 
-Concept orders go by email to `email` in `data/site.js`. Replace a concept image in `assets/merch/` if you print a final design.
+Concept orders go by email to `email` in `data/site.js` (subject includes the wrestler's name and design). Replace the images in `assets/merch/` if you print a final design.
 
 ## Logo
 
