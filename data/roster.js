@@ -161,8 +161,8 @@ window.KCW_ROSTER = [
   {
     slug: "brian-cross", name: "Brian Cross", nickname: "The Secret Sauce", category: "Manager",
     photo: "assets/roster/brian-cross.jpg",
-    bio: "He refuses to follow any scripts and he is a legal team's worst nightmare. He has one of the strongest minds and the brawn to back it up (in the form of one Kainan Bek). What does he have in his bag of tricks? Soon everyone will find out.\n\nOn social media he is @VoiceOfHulk. In his own words, from his X profile: \"I'm the guy that does the best Hulk Hogan impression on the planet!\"",
-    bioSource: "KCW TikTok 'Introducing the KCW Roster' (Oct 2, 2026). Additional @VoiceOfHulk line from his official X profile.",
+    bio: "He refuses to follow any scripts and he is a legal team's worst nightmare. He has one of the strongest minds and the brawn to back it up (in the form of one Kainan Bek). What does he have in his bag of tricks? Soon everyone will find out.",
+    bioSource: "KCW TikTok 'Introducing the KCW Roster' (Oct 2, 2026).",
     stats: [
       { label: "Role", value: "Manager of Kainan Bek", source: "KCW official bio" },
       { label: "Also known as", value: "@VoiceOfHulk", source: "Confirmed by Brian Cross" }
@@ -178,7 +178,7 @@ window.KCW_ROSTER = [
       { type: "twitch", url: "https://www.twitch.tv/bottomoftherabbithole", handle: "BottomOfTheRabbitHole" }
     ],
     partners: ["kainan-bek"],
-    merch: { type: "concept", image: "assets/merch/brian-cross-tee.jpg", design: "assets/merch/brian-cross-design.jpg", title: "Brian Cross Tron concept tee", kind: "tron", source: "Official KCW Tron title card (YouTube: The Secret Sauce Brain Cross KCW Tron)" },
+    merch: { type: "concept", image: "assets/merch/brian-cross-tee.jpg", design: "assets/merch/brian-cross-design.jpg", title: "Brian Cross Tron concept tee", kind: "tron", source: "Official KCW Tron title card (YouTube: The Secret Sauce Brian Cross KCW Tron)" },
     intro: { youtube: "VzPsP2-eRgE", tiktok: KCW_TT + "7692230637360532767" },
     matches: [
       { title: "Hulk Hogan hears the greatest Hulk Hogan impression of all time.", youtube: "olOSega1t-k", promotion: "VoiceOfHulk", note: "YouTube appearance" }
