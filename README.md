@@ -1,12 +1,13 @@
 # KCW — Krazy Championship Wrestling website
 
 A plain HTML/CSS/JavaScript website. No build step and nothing to install.
-Open `index.html` in a browser to preview it, or upload the whole folder to any web host.
+Open `index.html` in a browser to preview the splash page, then use **Click here to join the Hive** to enter the site. Or upload the whole folder to any web host.
 
 ## Pages
 | File | Page |
 |---|---|
-| `index.html` | Home: logo, next show and countdown, roster preview, latest matches, socials |
+| `index.html` | Splash: official KCW logo and a “Click here to join the Hive” button that enters the site |
+| `home.html` | Home: logo, next show and countdown, roster preview, latest matches, socials |
 | `roster.html` | Full roster grid with filters and search. Click a card to open the bio |
 | `wrestler.html?w=<slug>` | Individual bio page: photo, bio, stats, socials, KCW intro video, match history |
 | `events.html` | Upcoming shows (Sunday Night Swarm) and past events |

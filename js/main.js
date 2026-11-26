@@ -41,11 +41,11 @@
 
   /* ---------- header / footer ---------- */
   const page = document.body.dataset.page || "";
-  const NAV = [["index.html", "Home", "home"], ["roster.html", "Roster", "roster"], ["events.html", "Shows", "events"], ["videos.html", "Videos", "videos"], ["merch.html", "Merch", "merch"], ["about.html", "About", "about"], ["contact.html", "Follow / Contact", "contact"]];
+  const NAV = [["home.html", "Home", "home"], ["roster.html", "Roster", "roster"], ["events.html", "Shows", "events"], ["videos.html", "Videos", "videos"], ["merch.html", "Merch", "merch"], ["about.html", "About", "about"], ["contact.html", "Follow / Contact", "contact"]];
   const header = document.createElement("header");
   header.className = "site-header";
   header.innerHTML = `<div class="wrap">
-    <a class="brand" href="index.html"><img src="assets/img/favicon-180.png" alt="KCW bee"><div><span>KCW</span><small>KRAZY CHAMPIONSHIP WRESTLING</small></div></a>
+    <a class="brand" href="home.html"><img src="assets/img/favicon-180.png" alt="KCW bee"><div><span>KCW</span><small>KRAZY CHAMPIONSHIP WRESTLING</small></div></a>
     <button class="menu-btn" aria-label="Menu">&#9776;</button>
     <nav class="nav">${NAV.map(([h, l, k]) => `<a href="${h}" class="${k === page || (page === "wrestler" && k === "roster") ? "active" : ""}">${l}</a>`).join("")}</nav></div>`;
   document.body.prepend(header);
