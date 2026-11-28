@@ -28,10 +28,6 @@ window.KCW_SITE = {
 
   /* Shows. Dates use ISO format with Eastern Time offset (-05:00 in winter). */
   events: [
-    { title: "KCW Sunday Night Swarm — Episode 1 (Series Premiere)", start: "2026-11-27T19:00:00-05:00",
-      where: "Streaming on YouTube, Facebook, Instagram & TikTok",
-      blurb: "This Black Friday, the opening bell rings for the first time on KCW Sunday Night Swarm. Hard hits. Big personalities. Pro wrestling with something to prove.",
-      source: "KCW Instagram & TikTok" },
     { title: "KCW Sunday Night Swarm — Episode 2", start: "2026-11-29T19:00:00-05:00",
       where: "Streaming on YouTube, Facebook, Instagram & TikTok",
       blurb: "Right back in the ring Sunday night, with a new episode every Sunday at 7 PM Eastern.",
@@ -39,17 +35,20 @@ window.KCW_SITE = {
   ],
   weekly: { title: "Sunday Night Swarm", day: 0, time: "7:00 PM ET", note: "New episode every Sunday at 7 PM ET on all KCW socials." },
   pastEvents: [
+    { title: "KCW Sunday Night Swarm — Episode 1: Enter the Hive!", date: "2026-11-27", note: "Series premiere. Meet the competitors stepping into the spotlight as KCW begins its journey inside the squared circle.", youtube: "ZvF_7K061oA" },
     { title: "KCW event (10/18/2026)", date: "2026-10-18", note: "The Primal Mafia vs Jordyn Grange & Chris Black", youtube: "j1RJGqU-XBg" }
   ],
 
   /* Official KCW YouTube uploads */
   featured: [
+    { youtube: "ZvF_7K061oA", title: "KCW Sunday Night SWARM | Episode 1: Enter the Hive!", kind: "Episode" },
     { youtube: "JSQBlBtw4SU", title: "Commissioner John Lowe: Get Ready for the Swarm!", kind: "Short" },
     { youtube: "cr0mFN021Lc", title: "KRAZY CHAMPIONSHIP WRESTLING", kind: "Short" },
     { youtube: "utENrM_GiTQ", title: "The KCW Theme Song", kind: "Short" },
     { youtube: "1FEtsYCvEhE", title: "KCW Breaks Its Silence: Abuse & Bullying Have NO Place in Wrestling!", kind: "Statement" }
   ],
   tiktokHighlights: [
+    { url: "https://www.tiktok.com/@krazycwrestling/video/7713005072770141471", title: "Sunday Night SWARM | Episode 1: Enter the Hive!", img: "https://i.ytimg.com/vi/ZvF_7K061oA/hqdefault.jpg" },
     { url: "https://www.tiktok.com/@krazycwrestling/video/7704129530713181470", title: "The Swarm is Coming! — Sunday Night Swarm teaser", img: "assets/img/sunday-night-swarm.jpg" }
   ],
 
